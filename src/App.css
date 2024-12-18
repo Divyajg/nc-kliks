@@ -1,0 +1,25 @@
+.landing-page {
+  text-align: center;
+}
+
+.bg-image {
+  position: absolute;
+  left: 30%;
+  top: 0px;
+  height: 40vmin;
+  pointer-events: none;
+  background: #afb9ce;
+  z-index: -1;
+}
+
+.header {
+  margin-top: 7em;
+  position: sticky;
+  top: 0;
+  padding: 10px 16px;
+  color: rgb(255, 174, 0);
+  font-weight: bolder;
+}
+.tagline {
+  font-size: 0.6em;
+}
