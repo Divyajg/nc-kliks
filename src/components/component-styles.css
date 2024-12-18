@@ -1,0 +1,16 @@
+.main-page {
+  margin-top: 30vmin;
+}
+
+/*main page*/
+
+.event {
+  display: flex;
+  border: 1px solid;
+  margin-bottom: 2rem;
+  border-top: none;
+}
+.contact {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
