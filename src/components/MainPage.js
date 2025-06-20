@@ -1,52 +1,41 @@
 import React from "react";
 import "../components/component-styles.css";
 import imag1 from "../images/logo.jpg";
+import portrait1 from "../images/portrait1.jpeg";
+import portrait2 from "../images/portrait2.jpeg";
+import events1 from "../images/events1.jpeg";
+import tivoli1 from "../images/tivoli1.jpeg";
 
 const events = [
   {
-    title: "Photoshoot event 1",
-    subtitle: "Individual | Couple | Engagement | Elopement | Family | & More",
+    title: "Portrait",
+    subtitle: "Individual | Couple | Family",
     description:
-      "1-hour photoshoot at a location of your choice, 8 retouched photos (digital files; sent within 2 days; 1 revision possible)",
-    image: imag1,
-    price: "1000 DKK",
+      "Capture the essence of your personality with a portrait photoshoot. Whether it's for personal branding, family memories, or just for fun, we create stunning images that reflect who you are. Choose from a variety of styles and settings to make your portrait truly unique.",
+    image: portrait1,
+    price:
+      "700 DKK for one hour and 10 edited digital files. 1200 DKK for two hour and 20 edited digital files. Morethan two hours 500 DKK for each hour and 10 edited digital files per hour. Additional files will be charged 30 DKK each",
     id: 1,
   },
   {
-    title: "Photoshoot event 2",
-    subtitle: "Individual | Couple | Engagement | Elopement | Family | & More",
+    title: "Events",
+    subtitle: "Birthday | Celebrations | Engagement | Wedding",
     description:
-      "1-hour photoshoot at a location of your choice, 8 retouched photos (digital files; sent within 2 days; 1 revision possible)",
-    image: imag1,
-    price: "1000 DKK",
+      "Make your special day even more memorable with a photoshoot. Whether it's a birthday, engagement, or wedding, we capture the essence of your celebration. We offer a range of packages to suit your needs, from candid shots to posed portraits. Let us help you preserve the memories of your special day.",
+    image: events1,
+    price:
+      "1800 DKK for Three hour and 25 edited digital files. Morethan three hours 500 DKK for each hour and 10 edited digital files per hour. Additional files will be charged 30 DKK each",
     id: 2,
   },
   {
-    title: "Photoshoot event 3",
-    subtitle: "Individual | Couple | Engagement | Elopement | Family | & More",
+    title: "Tivoli Gardens Photoshoot",
+    subtitle: "Individual | Couple | Family",
     description:
-      "1-hour photoshoot at a location of your choice, 8 retouched photos (digital files; sent within 2 days; 1 revision possible)",
-    image: imag1,
-    price: "1000 DKK",
+      "Tivoli Gardens is a beautiful location for a photoshoot. The gardens are filled with flowers, fountains, and other beautiful scenery that make for great backdrops. Entry tickets are included without rides so you can enjoy the Tivoli experience even after the photoshoot.",
+    image: tivoli1,
+    price:
+      "800 DKK for one hour and 5 edited digital files. 1500 DKK for two hour and 10 edited digital files. Morethan two hours 600 DKK for each hour and 5 edited digital files per hour. Additional files will be charged 30 DKK each",
     id: 3,
-  },
-  {
-    title: "Photoshoot event 4",
-    subtitle: "Individual | Couple | Engagement | Elopement | Family | & More",
-    description:
-      "1-hour photoshoot at a location of your choice, 8 retouched photos (digital files; sent within 2 days; 1 revision possible)",
-    image: imag1,
-    price: "1000 DKK",
-    id: 4,
-  },
-  {
-    title: "Photoshoot event 5",
-    subtitle: "Individual | Couple | Engagement | Elopement | Family | & More",
-    description:
-      "1-hour photoshoot at a location of your choice, 8 retouched photos (digital files; sent within 2 days; 1 revision possible)",
-    image: imag1,
-    price: "1000 DKK",
-    id: 5,
   },
 ];
 
@@ -54,13 +43,17 @@ export default function MainPage() {
   return (
     <div className="main-page">
       {events.map((event) => (
-        <div key={event.id} className="event">
-          <img alt={event.title} src={event.image} />
-          <div>
-            <h2>{event.title}</h2>
-            <h3>{event.subtitle}</h3>
+        <div className="event">
+          <div key={event.id} className="event-item">
+            <img alt={event.title} src={event.image} width="700" height="400" />
+            <div className="event-details">
+              <h2 className="event-title">{event.title}</h2>
+              <h3 className="event-subtitle">{event.subtitle}</h3>
+              <p className="event-description">{event.description}</p>
+            </div>
+          </div>
+          <div className="event-price">
             <p>{event.price}</p>
-            <p>{event.description}</p>
           </div>
         </div>
       ))}
