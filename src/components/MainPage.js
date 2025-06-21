@@ -45,7 +45,7 @@ export default function MainPage() {
       {events.map((event) => (
         <div className="event">
           <div key={event.id} className="event-item">
-            <img alt={event.title} src={event.image} width="700" height="400" />
+            <img alt={event.title} src={event.image} width="400" height="400" />
             <div className="event-details">
               <h2 className="event-title">{event.title}</h2>
               <h3 className="event-subtitle">{event.subtitle}</h3>
